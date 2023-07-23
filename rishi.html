@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #fff4f42b;
+
+        }
+
+        .page {
+            height: 100%;
+            width: calc(100% - 20px);
+            padding: 0px 10px;
+            scroll-behavior: smooth;
+            user-select: none;
+        }
+
+        .header {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: calc(100% - 20px);
+            height: 60px;
+            padding: 0 10px;
+        }
+
+        .logo {
+            height: calc(100% - 20px);
+            padding: 10px 0;
+        }
+
+        .logo>img {
+            height: 100%;
+        }
+
+        .button-div {
+            padding: 8.5px 0;
+        }
+
+        .registor-button {
+            padding: 12px 20px;
+            border: 1.5px solid black;
+            border-radius: 36px;
+            background-color: white;
+            font-weight: 100;
+        }
+
+        .registor-button:hover {
+            cursor: pointer;
+        }
+
+        .section1-p {
+            margin-bottom: 40px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: min(5vw, 30px);
+            text-align: center;
+        }
+
+        .section1 {
+
+            padding: 0 20px;
+            padding-top: 60px;
+            padding-bottom: 50px;
+        }
+
+        .section1-button {
+            width: 100%;
+            height: 65px;
+            border-radius: 36px;
+            border: 0.5px solid #dedede;
+            background-color: white;
+            box-shadow: 0 0 28px rgba(59, 59, 59, .12);
+            position: relative;
+
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 17.5px;
+            left: 20px;
+        }
+
+        .icon2 {
+            position: absolute;
+            top: 17.5px;
+            right: 20px;
+            width: 20px;
+            padding: 5px 5px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #8160c1;
+        }
+
+        .inputtag {
+            width: 100%;
+            padding: 0px 0px;
+            margin: 0px 0px;
+            outline: none;
+            border: none;
+        }
+
+
+
+        .input-div {
+            height: 100%;
+        }
+
+        .searchlabel {
+            font-size: 15px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .searchform {
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            justify-content: center;
+            margin: 0 60px;
+            height: calc(100% - 20px);
+            padding: 10px 0;
+        }
+
+        .section2 {
+            padding: 0 5px;
+        }
+
+        .section2-h2 {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .section2-card-wrapper {
+            width: calc(100% - 20px);
+            height: 264px;
+            padding: 10px 10px;
+            overflow-x: scroll;
+            overflow-x: auto;
+            white-space: nowrap;
+            display: flex;
+            gap: 20px;
+            scroll-behavior: smooth;
+            touch-action: pan-y;
+            z-index: 12102103;
+        }
+
+        .section2-card-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            z-index: -1111;
+            height: 244px;
+            border-radius: 20px;
+            background-color: gray;
+            width: 160px;
+            overflow: hidden;
+            display: inline-block;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .card>a {
+            pointer-events: none;
+        }
+
+        .card-img {
+            z-index: 1110;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .section3 {
+            padding: 0 5px;
+            margin-bottom: 100px;
+        }
+
+
+        .section3-h1 {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .section3-p {
+            font-family: 'Inter', sans-serif;
+            opacity: 0.5;
+            padding-left: 10px;
+        }
+
+        .section3-card-wraper {
+            width: calc(100% - 10px);
+            height: 250px;
+            padding: 10px 5px;
+            overflow-x: scroll;
+            overflow-x: auto;
+            white-space: nowrap;
+            display: flex;
+            gap: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .section3-card-wraper::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .card-sec3 {
+            display: inline-block;
+            flex-shrink: 0;
+            height: 100%;
+            width: 130px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .card-img-sec3 {
+            background-color: black;
+            height: 200px;
+            border-radius: 90px;
+        }
+
+        .card-desc-sec3 {
+            font-family: 'Inter', sans-serif;
+            font-size: medium;
+            opacity: .8;
+            text-align: center;
+        }
+
+        .section4 {
+            padding: 0 2px;
+            margin-bottom: 100px;
+        }
+
+        .section4-h1 {
+            padding: 0 10px;
+            font-family: 'Inter', sans-serif;
+        }
+
+
+        .section4-card-wraper {
+            width: calc(100%);
+            height: 420px;
+            padding: 10px 0px;
+            overflow-x: scroll;
+            overflow-x: auto;
+            white-space: nowrap;
+            display: flex;
+            gap: 10px;
+            scroll-behavior: smooth;
+        }
+
+        .section4-card-wraper::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card-sec4 {
+            box-shadow: 0 5px 20px hsla(52, 20%, 69%, .22);
+            border: 0.5px solid hsla(52, 20%, 69%, .22);
+            height: calc(100% - 30px);
+            width: 280px;
+            background-color: white;
+            display: inline-block;
+            flex-shrink: 0;
+            padding: 15px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .card-sec4-img {
+            background-color: black;
+            width: 100%;
+            height: 190px;
+            border-radius: 25px;
+        }
+
+        .card-outer {
+            position: relative;
+            padding: 0 10px;
+
+        }
+
+        .card-sec4-banner {
+            position: absolute;
+            background-color: #9d6bff;
+            width: 200px;
+            height: 20px;
+            top: -10px;
+            left: 40px;
+            border-radius: 20px;
+        }
+
+        .card-sec4-banner>p {
+            margin: 0 0;
+            text-align: center;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: small;
+        }
+
+        .card-sec4-icon {
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .card-sec4-icon>div {
+            margin-top: 25px;
+            height: 35px;
+            width: 35px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        .card-sec4-desc {
+            background-color: white;
+        }
+
+        .card-sec4-desc>h3 {
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 0px;
+        }
+
+        .card-sec4-desc>p {
+            font-family: 'Inter', sans-serif;
+            opacity: .6;
+            margin-bottom: 20px;
+        }
+
+        .card-sec4-price {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .price-card {
+            background-color: white;
+
+        }
+
+        .price-card>p {
+            font-family: 'Inter', sans-serif;
+            opacity: 0.7;
+            margin: 5.5px 0;
+        }
+
+        .price-card>p>span {
+            opacity: 1;
+            font-size: large;
+        }
+
+        .card-tn>button {
+            padding: 7px 10px;
+            border-radius: 36px;
+            outline: none;
+            border: 1px solid #2d3134;
+            background-color: #2d3134;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: medium;
+        }
+
+        .quote {
+            font-family: 'Inter', sans-serif;
+            font-size: larger;
+            text-align: center;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 20px);
+            padding: 10px 10px;
+            gap: 10px;
+        }
+
+        .row1 {
+            height: 160px;
+            width: calc(100% - 80px);
+            padding: 40px 40px;
+        }
+
+        .row2 {
+            height: fit-content;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+        }
+
+        .col1 {
+            width: calc(50% - 40px);
+            padding-left: 40px;
+        }
+
+        .col2 {
+            width: 50%;
+        }
+
+        .img-footer {
+            max-width: 150px;
+        }
+
+        .img-footer>img {
+            width: 100%;
+        }
+
+        .row1>p {
+            font-family: 'Inter', sans-serif;
+            font-size: small;
+            max-width: 300px;
+        }
+
+        .social-icons {
+            width: min(100%, 300px);
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            gap: 10px;
+        }
+
+        .social-icons>div {
+            height: 40px;
+            width: 40px;
+            background-color: #2d3134;
+            border-radius: 50%;
+        }
+
+        .col1>ul {
+            list-style: none;
+            padding: 10px 0px;
+        }
+
+        .col1>ul>li>a {
+            font-family: 'Inter', sans-serif;
+            font-size: small;
+            text-decoration: none;
+            color: black;
+            padding: 3px 0;
+            opacity: .7;
+        }
+
+        .col1>p {
+            font-family: 'Inter', sans-serif;
+            font-size: medium;
+            font-weight: 600;
+            opacity: .9;
+        }
+
+        .Copyright {
+            font-family: 'Inter', sans-serif;
+            font-size: medium;
+            padding: 0 20px;
+            opacity: .8;
+        }
+
+        @media screen and (min-width:768px) {
+            .header {
+                padding: 0 40px;
+                width: calc(100% - 80px);
+            }
+
+            body {
+                background-color: white;
+            }
+
+            .section1 {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                padding: 60px 40px;
+                gap: 30px;
+                padding-bottom: 150px;
+            }
+
+            .section1-p {
+                font-size: 40px;
+            }
+
+            .section1-button {
+                height: 70px;
+                width: min(100%, 800px);
+                text-align: center;
+            }
+
+            .search-icon {
+                top: 20px;
+            }
+
+            .icon2 {
+                top: 20px;
+            }
+
+            .card {
+                width: calc(100% / 5);
+            }
+
+            .section2 {
+                padding: 0 20px;
+            }
+
+            .section3 {
+                padding: 0 20px;
+            }
+
+            .section3-card-wraper {
+                width: calc(100% - 20px);
+                height: 250px;
+                gap: 20px;
+                padding: 10px 10px;
+            }
+
+            .card-sec3 {
+                display: inline-block;
+                flex-shrink: 0;
+                height: 100%;
+                width: max(168px, calc((100% / 7) - 17px));
+            }
+
+
+            .section4 {
+                padding: 0 20px;
+            }
+
+            .section4-card-wraper {
+                width: calc(100% - 20px);
+                height: 420px;
+                padding: 10px 10px;
+                gap: 20px;
+            }
+
+            .section4-h1 {
+                padding: 0 10px;
+            }
+        }
+
+        .fixed {
+            background-color: white;
+            margin: 0 0;
+            z-index: 11111111;
+            position: fixed;
+            top: 0px;
+            left: 4px;
+        }
+
+        .fixed-button {
+            width: 300px;
+            left: calc(50% - 150px);
+            height: 50px;
+        }
+
+        .fixed-icon {
+            top: 10px;
+        }
+    </style>
+    <script>
+        var lastScrollTop = 0;
+        // Attach a scroll event listener to the window
+        window.addEventListener("scroll", function () {
+            if (screen.width > 768) {
+                var currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const tag = document.getElementById('hh')
+                const search = document.getElementById('button')
+                const i1 = document.getElementById('i1')
+                const i2 = document.getElementById('i2')
+                if (currentScrollTop > lastScrollTop) {
+                    console.log("Scrolling downward");
+                    console.log(window.scrollY)
+
+                    tag.classList.remove('fixed')
+                    search.classList.remove('fixed')
+                    search.classList.remove('fixed-button')
+                    i1.classList.remove('fixed-icon')
+                    i2.classList.remove('fixed-icon')
+
+                } else if (currentScrollTop < lastScrollTop) {
+                    console.log("Scrolling upward");
+                    console.log(window.scrollY)
+                    if (window.scrollY > 445) {
+                        tag.classList.add('fixed')
+                        search.classList.add('fixed')
+                        search.classList.add('fixed-button')
+                        i1.classList.add('fixed-icon')
+                        i2.classList.add('fixed-icon')
+                    }
+                    else {
+                        tag.classList.remove('fixed')
+                        search.classList.remove('fixed')
+                        search.classList.remove('fixed-button')
+                        i1.classList.remove('fixed-icon')
+                        i2.classList.remove('fixed-icon')
+
+                    }
+                }
+
+
+
+                lastScrollTop = currentScrollTop;
+            }
+        });
+
+
+        // //scroll using cursor
+        // let isMouseDown = false;
+        // let lastX;
+
+        // function startDrag(event) {
+        //     isMouseDown = true;
+        //     lastX = event.clientX;
+        //     event.preventDefault();
+        // }
+
+        // function doDrag(event) {
+        //     if (isMouseDown) {
+        //         const deltaX = event.clientX - lastX;
+        //         lastX = event.clientX;
+
+        //         const scrollContainer = document.querySelector('.scroll');
+        //         scrollContainer.scrollLeft -= deltaX;
+        //     }
+        // }
+
+        // function endDrag(event) {
+        //     isMouseDown = false;
+        // }
+    </script>
+</head>
+<div class="page">
+    <div class="header" id="hh">
+        <div class="logo">
+            <img src="logo_text_purple.png" alt="">
+        </div>
+        <div class="button-div">
+            <button class="registor-button">Registor Salon</button>
+        </div>
+    </div>
+
+    <div class="section1">
+        <p class="section1-p">
+            Select Best Salon Service in your City.
+        </p>
+        <div class="section1-button" id="button">
+            <div class="search-icon" id="i1">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_15_152)">
+                        <rect width="24" height="24" fill="white" />
+                        <circle cx="10.5" cy="10.5" r="6.5" stroke="#000000" stroke-linejoin="round" />
+                        <path
+                            d="M19.6464 20.3536C19.8417 20.5488 20.1583 20.5488 20.3536 20.3536C20.5488 20.1583 20.5488 19.8417 20.3536 19.6464L19.6464 20.3536ZM20.3536 19.6464L15.3536 14.6464L14.6464 15.3536L19.6464 20.3536L20.3536 19.6464Z"
+                            fill="#000000" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_15_152">
+                            <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="input-div">
+                <form action="" class="searchform">
+                    <label for="search" id="input" class="searchlabel">What to?</label>
+                    <input type="text" class="inputtag" id="search" placeholder="Salon name • Area • City • Therapy">
+                </form>
+                <script>
+                    const inputTag = document.getElementById("search");
+                    const labelTag = document.getElementById("input");
+
+                    inputTag.addEventListener("focus", () => {
+                        labelTag.style.display = "none";
+                        inputTag.style.height = "100%";
+                        inputTag.style.fontSize = "20px";
+                    });
+
+                    inputTag.addEventListener("blur", () => {
+                        if (inputTag.value === "") {
+                            labelTag.style.display = "block";
+                            inputTag.style.height = "";
+                            inputTag.style.fontSize = "15px";
+                        }
+                    });
+
+                </script>
+            </div>
+            <div class="icon2" id="i2">
+                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15 10.5A3.502 3.502 0 0 0 18.355 8H21a1 1 0 1 0 0-2h-2.645a3.502 3.502 0 0 0-6.71 0H3a1 1 0 0 0 0 2h8.645A3.502 3.502 0 0 0 15 10.5zM3 16a1 1 0 1 0 0 2h2.145a3.502 3.502 0 0 0 6.71 0H21a1 1 0 1 0 0-2h-9.145a3.502 3.502 0 0 0-6.71 0H3z"
+                            fill="white"></path>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="section2">
+        <h2 class="section2-h2">
+            Grab The Best Deals
+        </h2>
+        <div class="section2-card-wrapper  scroll"  >
+            <div class="card">
+                <a href="#">
+                    <img src="WhatsApp Image 2023-07-23 at 7.04.20 PM.jpeg" alt="" class="card-img">
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="WhatsApp Image 2023-07-23 at 7.04.20 PM.jpeg" alt="" class="card-img">
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="WhatsApp Image 2023-07-23 at 7.04.20 PM.jpeg" alt="" class="card-img">
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="WhatsApp Image 2023-07-23 at 7.04.20 PM.jpeg" alt="" class="card-img">
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="WhatsApp Image 2023-07-23 at 7.04.20 PM.jpeg" alt="" class="card-img">
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="WhatsApp Image 2023-07-23 at 7.04.20 PM.jpeg" alt="" class="card-img">
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="WhatsApp Image 2023-07-23 at 7.04.20 PM.jpeg" alt="" class="card-img">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="section3" id="">
+        <h1 class="section3-h1">Salon Services</h1>
+        <p class="section3-p">Select best Salon Services</p>
+        <div class="section3-card-wraper  scroll"  >
+            <div class="card-sec3">
+                <div class="card-img-sec3"></div>
+                <p class="card-desc-sec3">Hair Spa</p>
+            </div>
+            <div class="card-sec3">
+                <div class="card-img-sec3"></div>
+                <p class="card-desc-sec3">Hair Spa</p>
+            </div>
+            <div class="card-sec3">
+                <div class="card-img-sec3"></div>
+                <p class="card-desc-sec3">Hair Spa</p>
+            </div>
+            <div class="card-sec3">
+                <div class="card-img-sec3"></div>
+                <p class="card-desc-sec3">Hair Spa</p>
+            </div>
+            <div class="card-sec3">
+                <div class="card-img-sec3"></div>
+                <p class="card-desc-sec3">Hair Spa</p>
+            </div>
+            <div class="card-sec3">
+                <div class="card-img-sec3"></div>
+                <p class="card-desc-sec3">Hair Treatment</p>
+            </div>
+            <div class="card-sec3">
+                <div class="card-img-sec3"></div>
+                <p class="card-desc-sec3">Facial</p>
+            </div>
+            <div class="card-sec3">
+                <div class="card-img-sec3"></div>
+                <p class="card-desc-sec3">Hair Styling Female</p>
+            </div>
+            <div class="card-sec3">
+                <div class="card-img-sec3"></div>
+                <p class="card-desc-sec3">Hair Colour</p>
+            </div>
+            <div class="card-sec3">
+                <div class="card-img-sec3"></div>
+                <p class="card-desc-sec3">Bradial Mackup</p>
+            </div>
+        </div>
+    </div>
+    <div class="section4">
+        <h1 class="section4-h1">Salon Near You</h1>
+        <div class="section4-card-wraper  scroll"  >
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section4" style="margin-bottom: 70px;">
+        <h1 class="section4-h1">Top Rated Salon</h1>
+        <div class="section4-card-wraper  scroll"  >
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="quote">“Find the perfect Salon Service for your needs.”</p>
+    <div class="section4" style="margin-top: 70px;">
+        <h1 class="section4-h1">Luxurious Salon</h1>
+        <div class="section4-card-wraper  scroll"  >
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section4">
+        <h1 class="section4-h1">Salon Academy</h1>
+        <div class="section4-card-wraper  scroll"  >
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section4">
+        <h1 class="section4-h1">Makeup Salon</h1>
+        <div class="section4-card-wraper  scroll"  >
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-sec4">
+                <div class="card-sec4-img"></div>
+                <div class="card-outer">
+                    <div class="card-sec4-banner">
+                        <p>Get upto 30% off</p>
+                    </div>
+                    <div class="card-sec4-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="card-sec4-desc">
+                        <h3>Rockstyle hair studio</h3>
+                        <p>Satellite, Ahmedabad</p>
+                    </div>
+                    <div class="card-sec4-price">
+                        <div class="price-card">
+                            <p><span>500/</span>person</p>
+                        </div>
+                        <div class="card-tn"><button>call now</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="row1">
+            <div class="img-footer">
+                <img src="logo_text_purple.png" alt="" srcset="">
+            </div>
+            <p>Experience best Salon Services with Salons of Trakky</p>
+            <div class="social-icons">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="col1">
+                <p>Company</p>
+                <ul>
+                    <li><a href="">Registor Salon</a></li>
+                    <li><a href="">Blogs</a></li>
+                    <li><a href="">For Salons</a></li>
+                </ul>
+            </div>
+            <div class="col1">
+                <p>Categories</p>
+                <ul>
+                    <li><a href="">Offers</a></li>
+                    <li><a href="">Best Salons</a></li>
+                    <li><a href="">Bridals</a></li>
+                    <li><a href="">Salon Academy</a></li>
+                    <li><a href="">Makeup salons</a></li>
+                    <li><a href="">Top rated</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="Copyright">© Copyright 2023 Trakky. All Rights Reserved by Trakky Techno Services Pvt Ltd. |
+            Handcrafted in India by
+            Trakky</p>
+    </footer>
+</div>
+
+
+<body>
+
+</body>
+
+</html>
